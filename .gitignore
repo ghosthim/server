@@ -4,6 +4,7 @@
 /config/*.config.php
 /config/mimetype*.json
 /config/mount.php
+/config/CAN_INSTALL
 /apps/inc.php
 /assets
 /.htaccess
