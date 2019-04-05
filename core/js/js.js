@@ -1202,7 +1202,10 @@ function initCore() {
 			minDragDistance: 100
 		});
 
-		$('#app-content').prepend('<div id="app-navigation-toggle" class="icon-menu" style="display:none;" tabindex="0"></div>');
+		// Add app nav toggle only if it's not provided by the app
+		if (!$('#app-navigation-toggle').length) {
+			$('#app-content').prepend('<div id="app-navigation-toggle" class="icon-menu" style="display:none;" tabindex="0"></div>');
+		}
 
 		var toggleSnapperOnButton = function(){
 			if(snapper.state().state == 'left'){
